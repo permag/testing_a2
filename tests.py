@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import unittest
-from app.model import *
+from app.model import Model
 
 
 class ModelTestCase(unittest.TestCase):
