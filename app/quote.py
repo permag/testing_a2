@@ -1,5 +1,5 @@
 
-import json, random
+import sys, json, random
 
 class Quote:
 	
@@ -12,9 +12,14 @@ class Quote:
         self.quotes_data = self.get_shuffle_data(self.get_data())
         self.size = len(self.quotes_data)
 
-    def get_data(self):
-        with open('app/data.json') as json_data:
-            data = json.load(json_data)
+    def get_data(self, file_path=None):
+        if not file_path:
+            file_path = 'app/data.json'
+        try:
+            with open(file_path) as json_data:
+                data = json.load(json_data)
+        except IOError:
+            raise
         return data
 
     def get_shuffle_data(self, data):

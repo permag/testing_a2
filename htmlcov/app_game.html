@@ -79,15 +79,15 @@
 <p id='t1' class='pln'><span class='strut'>&nbsp;</span></p>
 <p id='t2' class='stm run hide_run'><span class='key'>class</span> <span class='nam'>Game</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
 <p id='t3' class='pln'><span class='strut'>&nbsp;</span></p>
-<p id='t4' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>quote_obj</span> <span class='op'>=</span> <span class='nam'>None</span><span class='strut'>&nbsp;</span></p>
+<p id='t4' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>quote_instance</span> <span class='op'>=</span> <span class='nam'>None</span><span class='strut'>&nbsp;</span></p>
 <p id='t5' class='pln'><span class='strut'>&nbsp;</span></p>
-<p id='t6' class='pln'>&nbsp; &nbsp; <span class='com'># dependency injection: quote_obj</span><span class='strut'>&nbsp;</span></p>
-<p id='t7' class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>__init__</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>quote_obj</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
-<p id='t8' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>quote_obj</span> <span class='op'>=</span> <span class='nam'>quote_obj</span><span class='strut'>&nbsp;</span></p>
+<p id='t6' class='pln'>&nbsp; &nbsp; <span class='com'># dependency injection: quote_instance</span><span class='strut'>&nbsp;</span></p>
+<p id='t7' class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>__init__</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>quote_instance</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t8' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>quote_instance</span> <span class='op'>=</span> <span class='nam'>quote_instance</span><span class='strut'>&nbsp;</span></p>
 <p id='t9' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>get_next_quote</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
 <p id='t10' class='pln'><span class='strut'>&nbsp;</span></p>
 <p id='t11' class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>get_next_quote</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
-<p id='t12' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>quote_obj</span><span class='op'>.</span><span class='nam'>get_next</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t12' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>quote_instance</span><span class='op'>.</span><span class='nam'>get_next</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
                 
             </td>
         </tr>

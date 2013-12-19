@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
-from app.quote import Quote
+from app.game import *
+from app.quote import *
 
 def main():
     print "Welcome."
-
+    game = Game(Quote())
+    print game.get_next_quote()
 
 
 
