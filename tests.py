@@ -4,8 +4,8 @@ import sys, json
 import unittest
 from mock import Mock
 # classes to test
-from app.quote import *
-from app.game import *
+from src.quote import *
+from src.game import *
 
 
 class QuoteTestCase(unittest.TestCase):

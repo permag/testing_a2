@@ -15,7 +15,7 @@ class Quote:
 
     def get_data(self, file_path=None):
         if not file_path:
-            file_path = 'app/data.json'
+            file_path = 'src/data.json'
         try:
             with open(file_path) as json_data:
                 data = json.load(json_data)

@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
-from app.game import *
-from app.quote import *
+
+from src.game import *
+from src.quote import *
+import tests
 
 def main():
     game = Game(Quote())
@@ -23,4 +25,7 @@ def main():
 
 # Run program
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except:
+        print '\nQuitting...'
