@@ -8,3 +8,6 @@
 ehthumbs.db
 Thumbs.db
 *.pyc
+*.html
+*.js
+*.dat
