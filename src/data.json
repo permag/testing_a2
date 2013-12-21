@@ -1,18 +1,18 @@
 [
 	{
 		"quote": "I have a dream.",
-		"author": "Martin Luther King"
+		"author": ["Martin Luther King"]
 	},
 	{
 		"quote": "Imagination is more important than knowledge.",
-		"author": "Albert Einstein"
+		"author": ["Albert Einstein", "Einstein"]
 	},
 	{
 		"quote": "Vi vänder blad och går vidare.",
-		"author": "Kungen"
+		"author": ["Kungen", "Carl XVI Gustaf"]
 	},
 	{
 		"quote": "Kwack!",
-		"author": "Kalle-Anka"
+		"author": ["Kalle-Anka", "Kalle Anka", "Donald Duck"]
 	}
 ]
