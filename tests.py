@@ -42,8 +42,9 @@ class QuoteTestCase(unittest.TestCase):
 
     def testShouldReturnNextQuote(self):
         quote = self.quote.get_next()
-        assert type(quote['quote']) is str, 'get_next() quote not returned correct.'
-        assert type(quote['author']) is list, 'get_next() author not returned correct.'
+        assert type(quote['quote']) is str, 'get_next() string quote not returned correct.'
+        assert type(quote['author']) is list, 'get_next() list author not returned correct.'
+        assert type(quote['author'][0] is str), 'get_next() string author not returned correct.'
 
 
 class GameTestCase(unittest.TestCase):
