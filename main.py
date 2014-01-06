@@ -9,7 +9,7 @@ def main():
 
     print '\n******* Välkommen till "Vem sa?" *******'
     count = 0
-    while game.nr_quotes > count:
+    while game.quote_count > count:
         count += 1
         game.new_quote_data()
         # Who said...?

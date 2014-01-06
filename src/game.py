@@ -5,7 +5,7 @@ class Game:
     # dependency injection: quote_instance
     def __init__(self, quote_instance):
         self.quote_instance = quote_instance
-        self.nr_quotes = quote_instance.size
+        self.quote_count = quote_instance.quote_count
         self.quote = ''
         self.author = []
         self.score = 0
@@ -31,11 +31,12 @@ class Game:
 
 
     def do_answer(self, answer):
-        for a in self.author:
-            if answer.strip().lower() == a.lower():
-                self.score += 1
-                self.correct = True
-                return True
-        self.correct = False
+        if answer:
+            for a in self.author:
+                if answer.strip().lower() == a.lower():
+                    self.score += 1
+                    self.correct = True
+                    return True
+            self.correct = False
         return False
 

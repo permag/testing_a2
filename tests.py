@@ -19,7 +19,7 @@ class QuoteTestCase(unittest.TestCase):
 
 
     ### UNIT TESTS ###
-    def testShouldThrowException(self):
+    def testShouldRaiseExceptionOnInvalidJsonFile(self):
         raised = False
         try:
             self.quote.get_data('invalid.json')  # invalid input raises exception
@@ -40,6 +40,15 @@ class QuoteTestCase(unittest.TestCase):
         assert self.quote.get_data() != self.quote.get_shuffle_data(self.quote.get_data()), 'shuffle_data() not returned shuffle.'
 
 
+    def testShouldRaiseExceptionOnNoneDataArgument(self):
+        raised = False
+        try:
+            self.quote.get_shuffle_data(None)
+        except:
+            raised = True
+        assert raised, 'shuffle_data() Exception not raised.'
+
+
     def testShouldReturnNextQuote(self):
         quote = self.quote.get_next()
         assert type(quote['quote']) is str, 'get_next() string quote not returned correct.'
@@ -54,7 +63,7 @@ class GameTestCase(unittest.TestCase):
         quoteMock = Mock(Quote)
         # setting return value
         quoteMock.get_next.return_value = {'quote': 'This is a test quote.', 'author': ['Me', 'Jag']}
-        quoteMock.size = 1
+        quoteMock.quote_count = 1
         # mock as dependency injection into Game class constructor
         self.game = Game(quoteMock)
 
@@ -109,6 +118,10 @@ class GameTestCase(unittest.TestCase):
         self.game.do_answer('Invalid')
         assert self.game.score == score_before, 'Score changed on wrong.'
 
+
+    def testShouldReturnFalseOnNoneAnswerArgument(self):
+        self.game.new_quote_data()
+        assert self.game.do_answer(None) == False, 'do_answer() None, not returned False'
 
 
 

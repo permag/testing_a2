@@ -8,10 +8,10 @@ class Quote:
         # init
         self.current = -1
         self.quotes_data = []
-        self.size = 0
+        self.quote_count = 0
         #
         self.quotes_data = self.get_shuffle_data(self.get_data())
-        self.size = len(self.quotes_data)
+        self.quote_count = len(self.quotes_data)
         
 
     def get_data(self, file_path=None):
@@ -26,8 +26,11 @@ class Quote:
 
 
     def get_shuffle_data(self, data):
-        random.shuffle(data)
-        return data
+        if data:
+            random.shuffle(data)
+            return data
+        else:
+            raise Exception('No data.')
 
 
     def get_next(self):
